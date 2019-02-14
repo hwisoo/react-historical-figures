@@ -37,23 +37,28 @@ class Person extends React.Component {
         let currentlyVisibleContent = null;
         if (this.state.fullBioShown == false) {
             currentlyVisibleContent =
-                <div className="personDiv">
-                    <h2>{this.props.name}</h2>
-                    <img src={this.props.img} />
+            <div className="card">
+                <img src={this.props.img} />
+                <div>
+                    <h2><b>{this.props.name}</b></h2>
                     <p>Years alive: {this.props.years[0]}-{this.props.years[1]}</p>
-                    <p>Die at age: {this.props.years[1] - this.props.years[0]}</p>
+                    <p>Died at age: {this.props.years[1] - this.props.years[0]}</p>
                     <p onClick={this.handleClick}>Bio: {this.props.bio}</p>
+                    
                 </div>
+            </div>
         } else {
             currentlyVisibleContent =
-                <div className="personDiv">
-                    <h2>{this.props.name}</h2>
+                <div className="card">
                     <img src={this.props.img} />
-                    <p>Years alive: {this.props.years[0]}-{this.props.years[1]}</p>
-                    <p>Die at age: {this.props.years[1] - this.props.years[0]}</p>
-                    <p onClick={this.handleClick}>Bio: {this.props.bio}</p>
-                    <p>Full Bio:</p>
-                    <p>{this.props.fullbio}</p>
+                    <div>
+                        <h2><b>{this.props.name}</b></h2>
+                        <p>Years alive: {this.props.years[0]}-{this.props.years[1]}</p>
+                        <p>Died at age: {this.props.years[1] - this.props.years[0]}</p>
+                        <p onClick={this.handleClick}>Bio: {this.props.bio}</p>
+                        <p>Full Bio:</p>
+                        <p>{this.props.fullbio}</p>
+                    </div>
                 </div>
         }
 
@@ -62,13 +67,23 @@ class Person extends React.Component {
                 <style global jsx>
                     {`
         
-                  .personDiv{
+                  .card{
+                      text-align: center;
                       margin-left: 30px;
+                      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                      transition: 0.3s;
+                      width: 40%;
                   }      
+
+                  .card:hover {
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                  }
                  
                   img {
-                      max-width: 10vw; 
+                      border: 2px solid darkgrey;
+                      max-width: 10vh;
                       max-height: 15vh; 
+                      border-radius: 5px 5px 0 0;
                   }
                 `}
                 </style>

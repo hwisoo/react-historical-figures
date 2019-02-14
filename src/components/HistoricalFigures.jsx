@@ -4,6 +4,7 @@ import khan from "../assets/images/khan.jpg";
 import curie from "../assets/images/curie.jpg";
 import napoleon from "../assets/images/napoleon.jpg";
 import galileo from "../assets/images/galileo.jpg";
+import aristotle from "../assets/images/aristotle.jpeg";
 
 const historicalFiguresList = [
     {
@@ -33,6 +34,13 @@ const historicalFiguresList = [
         bio: "Father of Observational Astronomy",
         fullbio: "Galileo Galilei was an Italian astronomer, physicist and engineer, sometimes described as a polymath. Galileo has been called the 'father of observational astronomy', the 'father of modern physics', the 'father of the scientific method', and the 'father of modern science.' ",
         img: galileo
+    },
+    {
+        name: "Aristotle",
+        years: [-384, -322],
+        bio: "Father of Western Philosophy",
+        fullbio: "Aristotle was an ancient Greek philosopher and scientist born in the city of Stagira, Chalkidiki, Greece. Along with Plato, he is considered the 'Father of Western Philosophy'.",
+        img: aristotle
     },
 
 ];
